@@ -47,12 +47,20 @@ document.addEventListener('scroll', ()=> {
     home.style.opacity = 1 - window.scrollY / homeHeight;
 })
 
+// when scrolling, it will show button "arrow up"
 
-
-
-
-
-
+document.addEventListener("scroll",()=>{
+    const arrowUp =document.querySelector(".arrow-up")
+if(window.scrollY >homeHeight/2){
+    arrowUp.classList.add("visible");
+}else{
+    arrowUp.classList.remove("visible");
+}
+});
+//click -> up to home
+document.addEventListener("click",()=>{
+    handleScrollToView('#home');
+})
 
 
 
