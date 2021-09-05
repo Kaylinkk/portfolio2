@@ -25,11 +25,17 @@ navBarMenu.addEventListener("click", (event)=>{
     const link = target.dataset.link;
     if(link == null){
         return;
-    } else{
-        handleScrollToView(link);
     }
-    
-} );
+        navBarMenu.classList.remove("open")
+        handleScrollToView(link);
+    });
+
+//Navbar toogle button for small screern
+const navBarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navBarToggleBtn.addEventListener("click",()=>{
+   navBarMenu.classList.toggle('open');
+});
+
 
 
 //handle click on "contact me"

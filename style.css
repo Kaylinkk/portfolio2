@@ -110,9 +110,9 @@ button {
   display: flex;
 }
 
-.navbar__logo {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bord);
+.navbar__logo__img {
+  width: 50px;
+  height: 50px;
 }
 
 .navbar__menu__item {
@@ -128,7 +128,7 @@ button {
 
 .navbar__toggle-btn {
   position: absolute;
-  top: 38px;
+  top: 29px;
   right: 32px;
   font-size: 24px;
   display: none;
@@ -407,9 +407,9 @@ button {
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
+  width: 50px;
   height: 2px;
-  margin-left: -12px;
+  transform: translateX(-50%);
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
@@ -484,13 +484,35 @@ button {
   }
   #navbar {
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
+    background-color: var(--color-dark-purple);
+    color: var(--color-white);
   }
+
+  #navbar.navbar--dark {
+    padding: 16px;
+    background-color: var(--color-indigo);
+  }
+
+  #navbar.navbar--dark .navbar__menu__item:hover {
+    background-color: var(--color-dark-indigo);
+    color: var(--color-white);
+  }
+
   .navbar__menu {
     flex-direction: column;
     align-items: center;
     width: 100%;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
+  }
+
+  .navbar__menu__item:hover {
+    background-color: var(--color-purple);
+    color: var(--color-dark-purple);
   }
 
   .about__majors {
@@ -508,5 +530,10 @@ button {
   }
   .project {
     flex-grow: 1;
+  }
+  .category__btn {
+    width: 210px;
+    margin-bottom: 8px;
+    padding: 8px 48px;
   }
 }
