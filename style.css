@@ -171,6 +171,17 @@ button {
   background-color: var(--color-lighter-green);
 }
 
+.home__resume{
+  text-decoration-line: none;
+  color: var(--color-dark-purple);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
 /* Section common */
 .section {
   text-align: center;
