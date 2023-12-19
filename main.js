@@ -1,41 +1,56 @@
 
-const navBar = document.querySelector("#navbar");
-const navbarHeight = navbar.getBoundingClientRect().height;
 
 //Make navbar transparent when it is on the top
+//Header 에 페이지 아래로 스크롤 시에 다크 스타일 적용
+
+
+const header = document.querySelector(".header");
+const headerHeight = header.offsetHeight;
+
 function handleScroll(){
 
-    if(window.scrollY > navbarHeight){
-        navBar.classList.add('navbar--dark');
+    if(window.scrollY > headerHeight){
+        header.classList.add('header--dark');
     }else{
-        navBar.classList.remove('navbar--dark');
+        header.classList.remove('header--dark');
     }
-    }
-    
+    } 
     document.addEventListener("scroll", handleScroll);
 
 
-    
+
+
+    //Make home slowly fade to transparanet 
+    //Home 섹션을 아래로 스크롤 시 투명하게 처리
+
+const home = document.querySelector(".home__container");
+const homeHeight = home.offsetHeight;
+document.addEventListener('scroll', ()=>{
+    home.style.opacity = 1 - window.scrollY /homeHeight;
+
+})
+
+
+
+
 //handle click on nav menu
+//Navbar 토글버튼 클릭 처리
 
-const navBarMenu = document.querySelector(".navbar__menu");
-navBarMenu.addEventListener("click", (event)=>{
-    
-    const target = event.target;
-    const link = target.dataset.link;
-    if(link == null){
-        return;
-    }
-        navBarMenu.classList.remove("open")
-        handleScrollToView(link);
-        
-    });
+const navBarMenu = document.querySelector(".header__menu");
+const navBarToggleBtn = document.querySelector(".header__toggle-btn");
 
-//Navbar toogle button for small screern
-const navBarToggleBtn = document.querySelector(".navbar__toggle-btn");
-navBarToggleBtn.addEventListener("click",()=>{
-   navBarMenu.classList.toggle('open');
-});
+
+//navbar 메뉴 클릭시 자동으로 닫음
+navBarMenu.addEventListener("click",() =>{
+    navBarMenu.classList.remove("open");
+} )
+
+//토글버튼 열고 닫기
+
+
+ navBarToggleBtn.addEventListener("click",()=>{
+    navBarMenu.classList.toggle('open');});
+
 
 
 
@@ -45,14 +60,6 @@ contactBtn.addEventListener("click", ()=> {
     handleScrollToView('#contact');
 });
 
-
-//Make home slowly fade to transparanet 
-
-const home = document.querySelector(".home__container");
-const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener('scroll', ()=> {
-    home.style.opacity = 1 - window.scrollY / homeHeight;
-});
 
 
 
