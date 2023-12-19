@@ -54,30 +54,7 @@ navBarMenu.addEventListener("click",() =>{
 
 
 
-//handle click on "contact me"
-const contactBtn = document.querySelector(".home__contact");
-contactBtn.addEventListener("click", ()=> {
-    handleScrollToView('#contact');
-});
 
-
-
-
-// when scrolling, it will show button "arrow up"
-
-document.addEventListener("scroll",()=>{
-    const arrowUp =document.querySelector(".arrow-up")
-if(window.scrollY >homeHeight/2){
-    arrowUp.classList.add("visible");
-}else{
-    arrowUp.classList.remove("visible");
-}
-//click -> up to home
-arrowUp.addEventListener("click",()=>{
-    handleScrollToView('#home');
-});
-
-});
 
 
 //Projects

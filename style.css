@@ -165,14 +165,6 @@ button {
 
 
 
-.home__avatar {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 2px solid var(--color-white);
-}
-
-
 .home__title,
 .home__description {
   color: var(--color-light-white);
@@ -183,29 +175,6 @@ span{
 }
 
 
-.home__contact {
-  color: var(--color-dark-purple);
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  margin: 24px;
-  padding: 8px 12px;
-  border: 2px solid var(--color-white);
-  border-radius: var(--size-border-radius);
-}
-.home__contact:hover {
-  background-color: var(--color-lighter-green);
-}
-
-.home__resume{
-  text-decoration-line: none;
-  color: var(--color-dark-purple);
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  margin: 24px;
-  padding: 8px 12px;
-  border: 2px solid var(--color-white);
-  border-radius: var(--size-border-radius);
-}
 
 /* Section common */
 .section {
@@ -220,6 +189,68 @@ span{
 }
 
 /* About */
+
+
+.profile__section{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 100px 100px;
+}
+
+
+.profile__img{
+  width: 300px;
+  height: 300px;
+  margin-right: 60px;
+}
+
+.introduction h2{
+  margin:0px;
+  font-size:35px;
+  margin:34px;
+}
+
+.introduction p{
+  font-size:16px;
+}
+
+
+.btn__container{
+  padding-top: 42px;
+  display: flex;
+ justify-content: center;
+}
+
+
+.btnPush {
+  box-shadow: 0px 5px 0px 0px #cb8e00;
+  background:var(--color-main-yellow);
+}
+.btnPush:hover {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 0px 0px #cb8e00;
+}
+
+a.button {
+  display: block;
+  position: relative;
+  width: 120px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s ;
+}
+
+
+
+
 
 .about__majors {
   display: flex;
