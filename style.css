@@ -4,13 +4,12 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-purple: #ede7f6;
   --color-dark-purple: #af8eb5;
   --color-blue-grey: #607d8b;
   --color-midium-bluegrey: #34515e;
   --color-dark-blue-grey: #263238;
   --color-instagram: #cd1460;
-  --color-indigo: #c5cae9;
+  --color-background-black: #1A1B1E;
   --color-dark-indigo: #9499b7;
   --color-light-green: #9ccc65;
   --color-lighter-green: #f8ffd7;
@@ -54,12 +53,12 @@ h1 {
   margin: 16px 0;
 }
 
-h2 {
+/* h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bord);
   color: var(--color-dark-blue-grey);
   margin: 8px 0;
-}
+} */
 
 h3 {
   font-size: var(--font-regular);
@@ -272,7 +271,7 @@ a.button {
 }
 .hr-how:after {
   background: white;
-  content: "AND";
+  content: "AND";
   display: inline-block;
   font: "BodoniXT" !important;
   font-size: 0.9em;
@@ -327,31 +326,154 @@ a.button {
 
 /* Skill */
 
+
+
+/* skill ability +progress bar */
+
 #skills {
-  background-color: var(--color-indigo);
+  background-color: #1A1B1E;
+}
+
+
+.skills h2 {
+  color:var(--color-light-white);
+  font-size: 2.4rem;
+}
+
+
+.skills p {
+  color:var(--color-light-white);
+  font-size: 1rem;
 }
 
 .skillset {
   display: flex;
-  background-color: var(--color-dark-indigo);
+  background-color: transparent;
   color: var(--color-light-white);
   margin: 20px 0;
+  
 }
+
 .skillset__title {
   color: var(--color-white);
 }
+
 .skillset__left {
   flex-basis: 60%;
-  background-color: var(--color-midium-bluegrey);
+  background-color: #34363C;
   padding: 20px 40px;
+  border-radius: 20px 0 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+
+.skill__section {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s;
 }
 
 .skill {
+  position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 32px;
 }
+
+
+.icon {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.icon img {
+  width: 100%;
+}
+
+.skill__info {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 86%;
+    left: 60px;
+  font-weight: bold;
+}
+
+.skill__name {
+  font-size: 14px;
+  color: var(--color-light-white);
+}
+
+.skill__percent {
+  font-size: 14px;
+  color: var(--color-dark-blue-grey);
+}
+
+.skill__progressbar {
+  width: 100%;
+  height: 24px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.icon__transparent{
+  background-color:var(--color-light-white);
+  border-radius: 8px;
+
+}
+
+
+.skill__progress {
+  height: 100%;
+  background: rgb(247,143,15);
+  background: linear-gradient(90deg, rgba(247,143,15,1) 0%, rgba(255,179,0,1) 48%, rgba(247,143,15,1) 100%, rgba(0,212,255,1) 100%);
+  border-radius: 10px;
+  width: 0;
+  transition: width 1s ease-in-out; 
+}
+
+
+
+/* uxui design card */
 .skillset__right {
   flex-basis: 40%;
 }
+.skill__img{
+  width: 100px;
+  height: 100px;
+  filter: brightness(0) saturate(100%) invert(72%) sepia(42%) saturate(4209%) hue-rotate(3deg) brightness(109%) contrast(103%);
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .tools {
   background-color: var(--color-blue-grey);
@@ -647,6 +769,16 @@ left:0;
   .skillset {
     flex-direction: column;
   }
+
+
+  .skillset__left {
+    flex-basis: 60%;
+    background-color: #34363C;
+    padding: 20px 40px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+
   .project {
     flex-grow: 1;
   }

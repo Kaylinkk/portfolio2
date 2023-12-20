@@ -152,3 +152,37 @@ window.addEventListener("wheel", ()=>{
     }
     selectNavItem(navItems[selectedNavIndex]);
 })
+
+
+
+
+//스킬바 만들기 + 뷰포트에 스킬화면이 보일 경우에 checkSkills함수 이벤트 실행
+
+function checkSkills() {
+    const skillSections = document.querySelectorAll('.skill__section');
+  
+    skillSections.forEach(skillSection => {
+      const skillSectionPosition = skillSection.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+  
+      if (
+        //windowHeight / 1.5 는 뷰포트를 의미
+        skillSectionPosition.top <= windowHeight / 1.5 &&
+        skillSectionPosition.bottom >= 0
+      ) {
+        const progressBar = skillSection.querySelector('.skill__progress');
+        const targetWidth = skillSection.getAttribute('data-percent');
+  
+        progressBar.style.width = targetWidth;
+        skillSection.style.opacity = '1';
+        skillSection.style.visibility = 'visible';
+      } else {
+        const progressBar = skillSection.querySelector('.skill__progress');
+        progressBar.style.width = '0';
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', checkSkills);
+  window.addEventListener('DOMContentLoaded', checkSkills);
+  
