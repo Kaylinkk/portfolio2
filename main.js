@@ -186,3 +186,4 @@ function checkSkills() {
   window.addEventListener('scroll', checkSkills);
   window.addEventListener('DOMContentLoaded', checkSkills);
   
+
