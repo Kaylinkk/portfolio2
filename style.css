@@ -396,8 +396,8 @@ a.button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 86%;
-    left: 60px;
+  width: 82%;
+  left: 60px;
   font-weight: bold;
 }
 
