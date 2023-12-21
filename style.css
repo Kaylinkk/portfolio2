@@ -598,10 +598,11 @@ a.button {
   align-items: center;
   justify-content: center;
   margin: 2rem 0;
+  flex-wrap: wrap;
 }
 
 
-button{
+.category{
   font-size: 16px;
     font-weight: 600;
     padding: 20px;
@@ -806,6 +807,8 @@ button{
   .header__toggle-btn {
     display: block;
     color:var(--color-light-white);
+    border:none;
+    background-color: transparent;
   }
 
   .header__menu{
@@ -957,10 +960,6 @@ left:0;
   .project {
     flex-grow: 1;
   }
-  /* .category {
-    width: 210px;
-    margin-bottom: 8px;
-    padding: 8px 48px;
-  } */
+
 
 }
