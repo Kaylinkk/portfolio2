@@ -629,11 +629,12 @@ a.button {
 
 .work__projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
- 
+  grid-template-columns: repeat(auto-fill, minmax(250px, auto));
   align-items: center;
   gap:2.3rem;
   margin-top:4.2rem;
+  margin-left: 100px;
+  margin-right: 100px;
   transition: all 250ms ease-in; 
 }
 
@@ -647,7 +648,7 @@ a.button {
  height: auto;
  width: 100%;
  border-radius: 28px;
- margin-bottom: 1.4rem;
+
 }
 
 .row{
@@ -665,7 +666,7 @@ a.button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+ 
 }
 
 .row h5{
@@ -689,7 +690,7 @@ a.button {
 }
 
 .row h4{
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 10px;
   line-height: 1.4;
@@ -871,11 +872,11 @@ left:0;
   }
 
 
+ 
 
-
-  .section {
+   .section {
     padding: 16px;
-  }
+  } 
 
   /* major */
   .profile__section{
@@ -987,11 +988,6 @@ left:0;
 
 
   
-
-
-  .project {
-    flex-grow: 1;
-  }
 
 
 }
