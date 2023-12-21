@@ -58,37 +58,53 @@ navBarMenu.addEventListener("click",() =>{
 
 
 //Projects
-const workBtnContainer= document.querySelector(".categories");
-const projectContainer= document.querySelector(".work__projects");
-const projects =document.querySelectorAll(".project");
-workBtnContainer.addEventListener("click",(event)=>{
-    const filter = event.target.dataset.filter ||event.target.parentNode.dataset.filter;
-    if(filter ==null){
-        return;
+const categories= document.querySelector(".categories");
+const projects = document.querySelectorAll('.project');
+const projectContainer =document.querySelector('.work__projects')
+
+categories.addEventListener('click',(event)=>{
+    const filter = event.target.dataset.filter;
+    if(filter == null){
+        return ;
     }
 
-    //remove selection from the previous item and select the nav
-    const active = document.querySelector(".category.selected");
-    active.classList.remove("selected");
-    const target = event.target.nodeName === "BUTTON" ? event.target :event.target.parentNode;
-   target.classList.add("selected");
+handleActiveSelection(event.target);
+filterProjects(filter);
     
+});
 
-    projectContainer.classList.add("anime-out");
+
+function handleActiveSelection(target){
+    
+       const active = document.querySelector('.category__selected');
+       active.classList.remove('category__selected');
+       target.classList.add('category__selected');
    
-setTimeout(()=>{
-    projects.forEach((project)=>{
-        
-        if(filter === '*' || filter=== project.dataset.type){
-            project.classList.remove('invisible');
-        }else
-        {
-            project.classList.add('invisible');
-    }
-});
-    projectContainer.classList.remove("anime-out");
-},300);
-});
+   
+}
+
+function filterProjects(filter){
+    projectContainer.classList.add('anime-out');
+    projects.forEach(project=>{
+        if(filter == 'all' || filter === project.dataset.type){
+            project.style.display='block';
+        } else{
+            project.style.display='none';
+        }
+    });
+    setTimeout(()=>{
+        projects.forEach((project)=>{
+            if(filter === 'all' || filter === project.dataset.type){
+                project.classList.remove('invisible');
+            }else{
+                project.classList.add('invisible');
+            }
+        })
+        projectContainer.classList.remove('anime-out');
+    },250)
+};
+
+
 
 
 
