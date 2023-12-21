@@ -58,7 +58,7 @@ navBarMenu.addEventListener("click",() =>{
 
 
 //Projects
-const workBtnContainer= document.querySelector(".work__categories");
+const workBtnContainer= document.querySelector(".categories");
 const projectContainer= document.querySelector(".work__projects");
 const projects =document.querySelectorAll(".project");
 workBtnContainer.addEventListener("click",(event)=>{
@@ -68,7 +68,7 @@ workBtnContainer.addEventListener("click",(event)=>{
     }
 
     //remove selection from the previous item and select the nav
-    const active = document.querySelector(".category__btn.selected");
+    const active = document.querySelector(".category.selected");
     active.classList.remove("selected");
     const target = event.target.nodeName === "BUTTON" ? event.target :event.target.parentNode;
    target.classList.add("selected");
