@@ -524,10 +524,72 @@ a.button {
 
 
 .language{
-  background-color: #4c4f57;
+  background:radial-gradient(#5d5c5f, #34363C);
   padding:1rem;
   box-shadow: -5px -5px 5px -4px rgba(0,0,0,0.46) inset;
   border-radius: 0 0 20px 0 ;
+
+}
+
+.language__container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row_1, .row_2{
+  display:flex;
+}
+
+
+.progress__content h2{
+  font-weight: 700;
+  font-size: 1.3rem;
+  color:var(--color-light-white);
+}
+
+.progress__circle{
+  position:relative;
+  background:transparent;
+  border:#1b1b1b 4px solid;
+  width: 5.5em;
+  height: 5.5em;
+  border-radius: 100%;
+  overflow: hidden;
+  margin:12px;
+}
+
+.progress{
+  width:5em;
+  height: 5em;
+  position: absolute;
+  bottom: -117%;
+  background: rgb(242,223,133);
+  background: linear-gradient(180deg, rgba(242,223,133,1) 3%, rgba(55,142,179,1) 48%, rgba(26,85,119,1) 100%);
+  transition: bottom 2.5s;
+}
+
+.progress__content{
+  background: linear-gradient(
+    157deg, #292929 0%, #131313 100%);
+  width: 4.6em;
+  height: 4.7em;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#fff;
+  z-index: 1;
+}
+
+.progress_card h5{
+  font-size: 16px;
+  font-weight: 400;
 }
 
 
@@ -687,7 +749,7 @@ a.button {
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   :root {
     /* Font size */
     --font-large: 30px;
@@ -818,21 +880,7 @@ left:0;
     box-shadow: 5px 0 5px -4px rgba(0,0,0,0.46) inset, 
     -5px 0 5px -4px rgba(0,0,0,0.46) inset;
    
-   
-    
-  
   }
-
-
-.language{
-  background-color: #4c4f57;
-  padding:1rem;
-  box-shadow: -5px -5px 5px -4px rgba(0,0,0,0.46) inset,
-  5px 0 5px -4px rgba(0,0,0,0.46) inset;
-  border-radius: 0 0 20px 20px ;
-}
-
-  
 
 
   .skill__info {
@@ -844,6 +892,25 @@ left:0;
     left: 60px;
     font-weight: bold;
   }
+
+
+
+.language{
+  background-color: #4c4f57;
+  padding:1rem;
+  box-shadow: -5px -5px 5px -4px rgba(0,0,0,0.46) inset,
+  5px 0 5px -4px rgba(0,0,0,0.46) inset;
+  border-radius: 0 0 20px 20px ;
+}
+
+
+
+
+
+
+
+  
+
 
   .project {
     flex-grow: 1;

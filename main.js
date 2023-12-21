@@ -185,5 +185,46 @@ function checkSkills() {
   
   window.addEventListener('scroll', checkSkills);
   window.addEventListener('DOMContentLoaded', checkSkills);
-  
+
+
+
+// circular 언어 프로그레스 바 만들기
+
+const progText = document.querySelectorAll('.progText');
+const progress = document.querySelectorAll('.progress');
+const progContainer= document.querySelector('.language__container');
+let bol = false;
+
+window.addEventListener("scroll", ()=>{
+    if(scrollY> progContainer.offsetTop -600 && bol === false){
+        
+        for(let i = 0; i< progText.length; i++){
+            progText[i].innerText = 0;
+            count = 0;
+
+            progress[i].style.bottom ="83%";
+
+            progress[i].style.bottom = progText[i].dataset.count - 100 + "%";
+
+            function updateCount(){
+                target = parseInt(progText[i].dataset.count);
+                
+                if(count < target){
+                    count++;
+                    progText[i].innerText = count;
+                    setTimeout(updateCount, 50);
+
+                }else {
+                    progText[i].innerText=target + "%";
+                }
+            }
+            updateCount();
+            bol = true;
+
+        }
+
+
+    }
+    
+});
 
