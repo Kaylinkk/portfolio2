@@ -690,91 +690,65 @@ a.button {
 
 /* project */
 
-.work__projects {
+
+
+
+.projects{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, auto));
-  align-items: center;
-  gap:2.3rem;
-  margin-top:4.2rem;
-  margin-left: 100px;
-  margin-right: 100px;
-  transition: all 250ms ease-in; 
-}
-
-.work__projects.anime-out {
-  opacity: 0;
-  transform: scale(0.96) translateY(40px);
-}
-
-
-.project__img{
- height: auto;
- width: 100%;
- border-radius: 28px;
+  /* grid-template-columns:repeat(4,1fr);
+  grid-template-rows: repeat(2,1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(14rem, auto));
+  gap:1.4rem;
 
 }
 
-.row{
+.project{
   background: #F7F8FA;
-  border-radius: 28px;
-  border : 1px solid transparent;
-  box-shadow: 10px 10px 10px -1px rgba(10,99,169,0.16), 
-                -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
-  padding:20px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 5px -1px rgba(10,99,169,0.16), 
+  -5px -5px 5px -1px rgba(255, 255, 255, 0.70);
   transition: all .50s ease;
-
+  overflow: hidden;
+  
 }
 
-.main__row{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
- 
-}
-
-.row h5{
-  font-size:20px;
-  font-weight: 600;
-  color:var(--color-dark-grey);
-}
-
-.row i{
-  display:inline-flex;
-  align-items: center;
-  justify-content: center;
-  width:3rem;
-  height:3rem;
-  font-size: 2rem;
-  color: var(--color-main-yellow);
-  border-radius:50%;
-  background:#F7F8FA;
-  box-shadow: 10px 10px 10px -1px rgba(10,99,169,0.16), 
-                -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
-}
-
-.row h4{
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  line-height: 1.4;
-}
-
-.project__description{
-background-color: #0dba6f;
-}
-
-
-.project.invisible {
-  display: none;
-}
-
-.row:hover{
-
+.project:hover{
   transform: translateY(-5px) scale(1.03);
   cursor: pointer;
 }
 
 
+.project__img{
+width:100%;
+}
+
+.project__metadata{
+/* padding:5px; */
+}
+
+.project__metadata h3{
+  color:#929292;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 5px;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; 
+  margin: 12px;
+ 
+}
+
+.tag {
+  display: flex;
+  padding: 5px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
 
 
 
