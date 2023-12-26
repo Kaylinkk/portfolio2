@@ -203,6 +203,30 @@ function checkSkills() {
   window.addEventListener('DOMContentLoaded', checkSkills);
 
 
+//모달창 만들기
+
+const svgWrapper = document.querySelectorAll('.svg__wrapper');
+svgWrapper.forEach((wrapper)=>{
+    wrapper.addEventListener('click', ()=>{
+        const modalId = wrapper.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        modal.classList.add('active');
+
+        const closeModal = modal.querySelector('.close');
+        closeModal.addEventListener('click', ()=>{
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (event)=>{
+            if(event.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    });
+});
+
+
+
 
 // circular 언어 프로그레스 바 만들기
 

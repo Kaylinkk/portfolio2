@@ -86,6 +86,10 @@ a{
   color:var(--color-light-white);
 }
 
+li {
+  list-style: none;
+}
+
 /* header */
 .header {
   background-color: transparent;
@@ -450,8 +454,8 @@ a.button {
 }
 
 .card__list{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 10px;
   justify-content: center;
     
@@ -476,6 +480,65 @@ a.button {
   z-index: 1;
  
 }
+
+
+/* 모달 */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+}
+
+.modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.modal__content {
+  max-width: 50%;
+  height: auto;
+  background: white;
+  border-radius: 5px;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-bottom: 20px;
+
+}
+
+.modal__content img{
+ 
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal__description p, li{
+  color: #333;
+  font-size: 1rem;
+}
+
+.modal__description h5{
+  color:var(--color-dark-grey);
+  
+}
+
+
+
 
 .item__img svg {
   width: 70%;
@@ -909,7 +972,7 @@ margin-top: 3rem;
 
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 767px) {
   :root {
     /* Font size */
     --font-large: 30px;
@@ -1053,6 +1116,23 @@ left:0;
     width: 74%;
     left: 60px;
     font-weight: bold;
+  }
+
+
+
+  /* 모달창 */
+  .modal__content {
+    max-width: 80%;
+    height: auto;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    max-height: 80vh;
+  
+  }
+  
+  .modal__description{
+    padding: 15px 20px 0 20px;
   }
 
 
