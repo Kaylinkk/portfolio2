@@ -180,8 +180,8 @@ function checkSkills() {
 
 //모달창 만들기
 
-const svgWrapper = document.querySelectorAll('.svg__wrapper');
-svgWrapper.forEach((wrapper)=>{
+const itemWrapper = document.querySelectorAll('.item__wrapper');
+itemWrapper.forEach((wrapper)=>{
     wrapper.addEventListener('click', ()=>{
         const modalId = wrapper.getAttribute('data-modal');
         const modal = document.getElementById(modalId);
@@ -199,6 +199,11 @@ svgWrapper.forEach((wrapper)=>{
         });
     });
 });
+
+
+
+
+
 
 
 

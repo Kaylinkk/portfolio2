@@ -694,7 +694,7 @@ a.button {
 .projects{
  
   display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(14rem, auto));
+  grid-template-columns: repeat(auto-fill, minmax(15rem, auto));
   gap:1.4rem;
   transition:all 250ms ease-out;
 }
@@ -1059,9 +1059,7 @@ left:0;
   border-radius: 13px;
 }
 
-.projects{
-  grid-template-columns: repeat(2, 1fr);
-}
+
 
 .footer__row2{
   display: flex;
