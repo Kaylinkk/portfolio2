@@ -186,15 +186,18 @@ itemWrapper.forEach((wrapper)=>{
         const modalId = wrapper.getAttribute('data-modal');
         const modal = document.getElementById(modalId);
         modal.classList.add('active');
+        document.body.classList.add('modal-open');
 
         const closeModal = modal.querySelector('.close');
         closeModal.addEventListener('click', ()=>{
             modal.classList.remove('active');
+            document.body.classList.remove('modal-open');
         });
 
         modal.addEventListener('click', (event)=>{
             if(event.target === modal) {
                 modal.classList.remove('active');
+                document.body.classList.remove('modal-open');
             }
         });
     });
