@@ -58,116 +58,91 @@ navBarMenu.addEventListener("click",() =>{
 
 
 //Projects
-const categories= document.querySelector(".categories");
+const categories = document.querySelector('.categories');
 const projects = document.querySelectorAll('.project');
-const projectContainer =document.querySelector('.work__projects')
-
-categories.addEventListener('click',(event)=>{
-    const filter = event.target.dataset.filter;
-    if(filter == null){
-        return ;
-    }
-
-handleActiveSelection(event.target);
-filterProjects(filter);
-    
+const projectsContainer = document.querySelector('.projects');
+categories.addEventListener('click', (event) => {
+  const filter = event.target.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+  handleActiveSelection(event.target);
+  filterProjects(filter);
 });
 
-
-function handleActiveSelection(target){
-    
-       const active = document.querySelector('.category__selected');
-       active.classList.remove('category__selected');
-       target.classList.add('category__selected');
-   
-   
+function handleActiveSelection(target) {
+  const active = document.querySelector('.category__selected');
+  active.classList.remove('category__selected');
+  target.classList.add('category__selected');
 }
 
-function filterProjects(filter){
-    projectContainer.classList.add('anime-out');
-    projects.forEach(project=>{
-        if(filter == 'all' || filter === project.dataset.type){
-            project.style.display='block';
-        } else{
-            project.style.display='none';
-        }
-    });
-    setTimeout(()=>{
-        projects.forEach((project)=>{
-            if(filter === 'all' || filter === project.dataset.type){
-                project.classList.remove('invisible');
-            }else{
-                project.classList.add('invisible');
-            }
-        })
-        projectContainer.classList.remove('anime-out');
-    },250)
-};
-
-
-
-
+function filterProjects(filter) {
+  projects.forEach((project) => {
+    if (filter === 'all' || filter === project.dataset.type) {
+      project.style.display = 'block';
+    } else {
+      project.style.display = 'none';
+    }
+  });
+  projectsContainer.classList.add('anim-out');
+  setTimeout(() => {
+    projectsContainer.classList.remove('anim-out');
+  }, 300);
+}
 
 
 // const sectionIds = [
-//     "#home",
-//     "#about",
-//     "#skills",
+//     '#home',
+//     '#about',
+//     '#skills',
 //     '#work',
-//     "#contact"
-// ];
-
-// const sections = sectionIds.map(id =>document.querySelector(id));
-// const navItems = sectionIds.map(id =>document.querySelector(`[data-link="${id}"]`));
-
-
-// let selectedNavIndex = 0;
-// let selectedNavItem = navItems[0];
-// function selectNavItem(selected){
-//     selectedNavItem.classList.remove('active');
-//     selectedNavItem =selected;
-//     selectedNavItem.classList.add('active');
-// }
-
-// function handleScrollToView(selector){
-//     const scrollTo = document.querySelector(selector);
-//     scrollTo.scrollIntoView({behavior:'smooth'});
-//     selectNavItem(navItems[sectionIds.indexOf(selector)]);
-// }
-
-// const observerOptions = {
-//     root:null, 
-//     rootMargin:"0px", 
-//     threshold:0.3
-// };
-
-// const observerCallback =(entries, observer) => {
-//     entries.forEach(entry =>{
-//         if(!entry.isIntersecting && entry.intersectionRatio >0 ){
-           
-//             const index = sectionIds.indexOf(`#${entry.target.id}`);
-           
-//             //스크롤링이 아래로 되어서 페이지가 올라옴
-//             if(entry.boundingClientRect.y <0){
-//                 selectedNavIndex = index + 1;
-//             }else{
-//                 selectedNavIndex = index - 1;
-//             }
-            
-//         }
+//     '#contact',
+//   ];
+//   const sections = sectionIds.map((id) => document.querySelector(id));
+//   const navItems = sectionIds.map((id) =>
+//     document.querySelector(`[href="${id}"]`)
+//   );
+  
+//   const visibleSections = sectionIds.map(() => false);
+//   let activeNavItem = navItems[0];
+  
+//   const options = {
+//     rootMargin: '-20% 0px 0px 0px',
+//     threshold: [0, 0.98],
+//   };
+//   const observer = new IntersectionObserver(observerCallback, options);
+//   sections.forEach((section) => observer.observe(section));
+  
+//   function observerCallback(entries) {
+//     let selectLastOne;
+//     entries.forEach((entry) => {
+//       const index = sectionIds.indexOf(`#${entry.target.id}`);
+//       visibleSections[index] = entry.isIntersecting;
+//       selectLastOne =
+//         index === sectionIds.length - 1 &&
+//         entry.isIntersecting &&
+//         entry.intersectionRatio >= 0.95;
 //     });
-// };
-// const observer = new IntersectionObserver(observerCallback,observerOptions);
-// sections.forEach(section =>observer.observe(section));
-
-// window.addEventListener("wheel", ()=>{
-//     if(window.scrollY === 0){
-//         selectedNavIndex = 0;
-//     }else if (window.scrollY + window.innerHeight ===document.body.clientHeight){
-//         selectedNavIndex =navItems.length - 1;
-//     }
-//     selectNavItem(navItems[selectedNavIndex]);
-// })
+  
+//     const navIndex = selectLastOne
+//       ? sectionIds.length - 1
+//       : findFirstIntersecting(visibleSections);
+//     selectNavItem(navIndex);
+//   }
+  
+//   function findFirstIntersecting(intersections) {
+//     const index = intersections.indexOf(true);
+//     return index >= 0 ? index : 0;
+//   }
+  
+//   function selectNavItem(index) {
+//     const navItem = navItems[index];
+//     if (!navItem) return;
+//     activeNavItem.classList.remove('active');
+//     activeNavItem = navItem;
+//     activeNavItem.classList.add('active');
+//   }
+  
 
 
 
@@ -268,3 +243,20 @@ window.addEventListener("scroll", ()=>{
     
 });
 
+
+
+//  이름에 따른 태그색상 정하기
+
+function changeTagBackground(tagName, color) {
+    const tags = document.querySelectorAll(`.tag[data-tag="${tagName}"]`);
+    tags.forEach(tag => {
+        tag.style.backgroundColor = color;
+    });
+}
+
+changeTagBackground('figma', '#F5CEC7'); 
+changeTagBackground('html', '#FFF9DD');
+changeTagBackground('css', '#FFF0D5'); 
+changeTagBackground('javascript', '#D6E6ff'); 
+changeTagBackground('photoshop', '#E5E7FB'); 
+changeTagBackground('adobeXD', '#63465A'); 

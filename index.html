@@ -469,9 +469,6 @@
   
                 </div>
 
-
-
-
           </div>
         </div>
       </div>
@@ -487,14 +484,14 @@
         <h1>PROJECTS</h1>
 
         <div class="categories">
-          <button class="category category__selected" data-filter="all" type="button">
+          <button class="category category__selected " data-filter="all" type="button">
             All
           </button>
-          <button class="category " data-filter="design" type="button">
+          <button class="category " data-filter="uxui" type="button">
             UIUX    
           </button>
-          <button class="category " data-filter="banner" type="button">
-           Banner
+          <button class="category " data-filter="others" type="button">
+           OTHERS
           </button>
         </div>
 
@@ -502,47 +499,44 @@
 
 
 <ul class="projects">
-  <li class="project">
+  <li class="project" data-type="uxui">
     <div>
       <img
       src="img/jobs/paintbord.jpg"
       alt="paintboard"
       class="project__img"
     />
-    <div class="project__metadata">
+    <div class="project__metadata" >
       <h3>project #1</h3>
-      <div class="tag-container">
-        <div class="tag"> #figma </div>
-        <div class="tag"> #html </div>
-        <div class="tag"> #css </div>
-        <!-- 여러 태그를 추가할 수 있습니다 -->
+      <div class="tag-container" id="tagContainer">
+        <div class="tag" data-tag="figma"> #figma </div>
+        <div class="tag" data-tag="photoshop"> #photoshop </div>
       </div>
     </div>
     </div>
 </li>
 
-<li class="project">
+<li class="project" data-type="others">
   <div class="project__container">
     <img
-    src="img/jobs/paintbord.jpg"
+    src="img/banner/2.jpg"
     alt="paintboard"
     class="project__img"
   />
   <div class="project__metadata">
     <h3>project #1</h3>
 
-    <div class="tag-container">
-      <div class="tag"> #figma </div>
-      <div class="tag"> #html </div>
-      <div class="tag"> #css </div>
-      <!-- 여러 태그를 추가할 수 있습니다 -->
+    <div class="tag-container" id="tagContainer">
+      <div class="tag" data-tag="figma"> #figma </div>
+    </div>
+
     </div>
   </div>
   </div>
 </li>
 
 
-<li class="project">
+<li class="project"  data-type="uxui">
   <div>
     <img
     src="img/jobs/paintbord.jpg"
@@ -551,18 +545,99 @@
   />
   <div class="project__metadata">
     <h3>project #1</h3>
-    <div class="tag-container">
-      <div class="tag"> #figma </div>
-      <div class="tag"> #html </div>
-      <div class="tag"> #css </div>
-      <!-- 여러 태그를 추가할 수 있습니다 -->
+    <div class="tag-container" id="tagContainer">
+      <div class="tag" data-tag="figma"> #figma </div>
+      <div class="tag" data-tag="css"> #css </div>
+      <div class="tag" data-tag="html"> #html </div>
+      <div class="tag" data-tag="javascript"> #javascript </div>
+    </div>
+
+  </div>
+  </div>
+</li>
+
+
+<li class="project"  data-type="uxui">
+  <div>
+    <img
+    src="img/background.jpg"
+    alt="paintboard"
+    class="project__img"
+  />
+  <div class="project__metadata">
+    <h3>project #1</h3>
+    <div class="tag-container" id="tagContainer">
+      <div class="tag" data-tag="figma"> #figma </div>
+      <div class="tag" data-tag="css"> #css </div>
+      <div class="tag" data-tag="html"> #html </div>
+      <div class="tag" data-tag="javascript"> #javascript </div>
     </div>
   </div>
   </div>
 </li>
 
 
-<li class="project">
+<li class="project"  data-type="others">
+  <div>
+    <img
+    src="img/banner/5.jpg"
+    alt="paintboard"
+    class="project__img"
+  />
+  <div class="project__metadata">
+    <h3>project #1</h3>
+    <div class="tag-container" id="tagContainer">
+      <div class="tag" data-tag="figma"> #figma </div>
+      <div class="tag" data-tag="css"> #css </div>
+      <div class="tag" data-tag="html"> #html </div>
+      <div class="tag" data-tag="javascript"> #javascript </div>
+    </div>
+  </div>
+  </div>
+</li>
+
+
+<li class="project"  data-type="others">
+  <div>
+    <img
+    src="img/banner/7.jpg"
+    alt="paintboard"
+    class="project__img"
+  />
+  <div class="project__metadata">
+    <h3>project #1</h3>
+    <div class="tag-container" id="tagContainer">
+      <div class="tag" data-tag="figma"> #figma </div>
+      <div class="tag" data-tag="css"> #css </div>
+      <div class="tag" data-tag="html"> #html </div>
+      <div class="tag" data-tag="javascript"> #javascript </div>
+    </div>
+  </div>
+  </div>
+</li>
+
+
+<li class="project"  data-type="uxui">
+  <div>
+    <img
+    src="img/banner/8.jpg"
+    alt="paintboard"
+    class="project__img"
+  />
+  <div class="project__metadata">
+    <h3>project #1</h3>
+    <div class="tag-container" id="tagContainer">
+      <div class="tag" data-tag="figma"> #figma </div>
+      <div class="tag" data-tag="css"> #css </div>
+      <div class="tag" data-tag="html"> #html </div>
+      <div class="tag" data-tag="javascript"> #javascript </div>
+    </div>
+  </div>
+  </div>
+</li>
+
+
+<li class="project"  data-type="others">
   <div>
     <img
     src="img/jobs/paintbord.jpg"
@@ -571,96 +646,11 @@
   />
   <div class="project__metadata">
     <h3>project #1</h3>
-    <div class="tag-container">
-      <div class="tag"> #figma </div>
-      <div class="tag"> #html </div>
-      <div class="tag"> #css </div>
-      <!-- 여러 태그를 추가할 수 있습니다 -->
-    </div>
-  </div>
-  </div>
-</li>
-
-
-<li class="project">
-  <div>
-    <img
-    src="img/jobs/paintbord.jpg"
-    alt="paintboard"
-    class="project__img"
-  />
-  <div class="project__metadata">
-    <h3>project #1</h3>
-    <div class="tag-container">
-      <div class="tag"> #figma </div>
-      <div class="tag"> #html </div>
-      <div class="tag"> #css </div>
-      <!-- 여러 태그를 추가할 수 있습니다 -->
-    </div>
-  </div>
-  </div>
-</li>
-
-
-<li class="project">
-  <div>
-    <img
-    src="img/jobs/paintbord.jpg"
-    alt="paintboard"
-    class="project__img"
-  />
-  <div class="project__metadata">
-    <h3>project #1</h3>
-    <div class="tag-container">
-      <div class="tag"> #figma </div>
-      <div class="tag"> #html </div>
-      <div class="tag"> #css </div>
-      <!-- 여러 태그를 추가할 수 있습니다 -->
-    </div>
-  </div>
-  </div>
-</li>
-
-
-<li class="project">
-  <div>
-    <img
-    src="img/jobs/paintbord.jpg"
-    alt="paintboard"
-    class="project__img"
-  />
-  <div class="project__metadata">
-    <h3>project #1</h3>
-    <div class="tag-container">
-      <div class="tag"> #figma </div>
-      <div class="tag"> #html </div>
-      <div class="tag"> #css </div>
-      <!-- 여러 태그를 추가할 수 있습니다 -->
-    </div>
-  </div>
-  </div>
-</li>
-
-
-<li class="project">
-  <div>
-    <img
-    src="img/jobs/paintbord.jpg"
-    alt="paintboard"
-    class="project__img"
-  />
-  <div class="project__metadata">
-    <h3>project #1</h3>
-    <div class="tag-container">
-      <div class="tag"> #figma </div>
-      <div class="tag"> #html </div>
-      <div class="tag"> #css </div>
-      <div class="tag"> #css </div>
-      <div class="tag"> #css </div>
-      <div class="tag"> #css </div>
-      <div class="tag"> #css </div>
-      
-      <!-- 여러 태그를 추가할 수 있습니다 -->
+    <div class="tag-container" id="tagContainer">
+      <div class="tag" data-tag="figma"> #figma </div>
+      <div class="tag" data-tag="css"> #css </div>
+      <div class="tag" data-tag="html"> #html </div>
+      <div class="tag" data-tag="javascript"> #javascript </div>
     </div>
   </div>
   </div>
@@ -673,7 +663,7 @@
 
 
 </ul>
-
+ 
 
   
 
