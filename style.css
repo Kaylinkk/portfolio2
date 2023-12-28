@@ -522,6 +522,12 @@ a.button {
   display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
+.modal__content a img{
+  width:300px;
+  height: auto
+}
+
+
 .modal__content img{
   width: 100%;
   height: auto;
