@@ -910,16 +910,9 @@ margin-top: 3rem;
 /* grocery.html page css */
 
 
-.header__logo__title__sub{
-  background-color: rgba(0, 0, 0, 0.8);
-  color: var(--color-white);
-  padding:16px;
-}
 
-.header__logo__title__sub a{
-  text-decoration: none;
-  color:var(--color-light-white);
-  font-family: 'Pacifico', cursive;
+.header--active{
+  opacity: 1;
 }
 
 
@@ -985,9 +978,6 @@ margin-top: 3rem;
       background: white;
       margin: 0;
       padding: 3rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       min-height: 100vh;
       text-align: left;
     }
@@ -1284,6 +1274,7 @@ left:0;
 
 .list__learned{
   display: flex;
+  flex-direction: column;
 }
 
 

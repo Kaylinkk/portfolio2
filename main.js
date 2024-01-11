@@ -6,13 +6,18 @@
 
 const header = document.querySelector(".header");
 const headerHeight = header.offsetHeight;
-
+const headerLogo= document.querySelector('.header__logo');
+headerLogo.style.color = '#fff';
 function handleScroll(){
 
+    
     if(window.scrollY > headerHeight){
+       
         header.classList.add('header--dark');
+       
     }else{
         header.classList.remove('header--dark');
+      
     }
     } 
     document.addEventListener("scroll", handleScroll);
