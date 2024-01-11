@@ -985,8 +985,9 @@ margin-top: 3rem;
       background: white;
       margin: 0;
       padding: 3rem;
-      display: grid;
-      place-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       min-height: 100vh;
       text-align: left;
     }
@@ -997,7 +998,7 @@ margin-top: 3rem;
       
       background: white;
       box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 /0.15);
-      padding: 0 1rem;
+      padding: 2rem;
       margin:0;
       border-radius: 0.1rem;
 
@@ -1020,9 +1021,6 @@ margin-top: 3rem;
 .list__learned li:last-child {
 	margin-bottom: 1rem;
 }
-
-
-
 
 
 .project__section li::marker {
@@ -1283,6 +1281,11 @@ left:0;
   font-size:14px;
   
 }
+
+.list__learned{
+  display: flex;
+}
+
 
 
 }
