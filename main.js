@@ -2,8 +2,6 @@
 
 //Make navbar transparent when it is on the top
 //Header 에 페이지 아래로 스크롤 시에 다크 스타일 적용
-
-
 const header = document.querySelector(".header");
 const headerHeight = header.offsetHeight;
 const headerLogo= document.querySelector('.header__logo');
@@ -223,4 +221,5 @@ changeTagBackground('css', '#FFF0D5');
 changeTagBackground('javascript', '#D6E6ff'); 
 changeTagBackground('photoshop', '#E5E7FB'); 
 changeTagBackground('adobeXD', '#63465A'); 
+
 
