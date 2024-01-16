@@ -7,9 +7,9 @@
 const header = document.querySelector(".header");
 const headerHeight = header.offsetHeight;
 const headerLogo= document.querySelector('.header__logo');
-headerLogo.style.color = '#fff';
-function handleScroll(){
 
+
+function handleScroll(){
     
     if(window.scrollY > headerHeight){
        
@@ -109,6 +109,7 @@ function checkSkills() {
     skillSections.forEach(skillSection => {
       const skillSectionPosition = skillSection.getBoundingClientRect();
       const windowHeight = window.innerHeight;
+      
   
       if (
         //windowHeight / 1.5 는 뷰포트를 의미
